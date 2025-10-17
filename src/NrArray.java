@@ -19,4 +19,17 @@ public class NrArray {
         }
         return max;
     }
+
+    public int minNumber(){
+        if(numbers.isEmpty()){
+            return 0;
+        }
+        int min = numbers.get(0);
+        for(int number : numbers){
+            if(number < min){
+                min = number;
+            }
+        }
+        return min;
+    }
 }
