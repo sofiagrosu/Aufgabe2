@@ -32,4 +32,21 @@ public class NrArray {
         }
         return min;
     }
+
+    public int maxSum(){
+        if(numbers.size() < n){
+            return 0;
+        }
+        int totalSum = 0;
+        for(int number : numbers){
+            totalSum += number;
+        }
+        int min = minNumber();
+        return totalSum - min;
+    }
+    public int minSum(){
+        if(numbers.size() <n )
+            return 0;
+        int totalSum = 0;
+    }
 }
