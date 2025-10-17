@@ -1,11 +1,18 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class NrArray {
     private List<Integer> numbers;
     private int n;
-    public NrArray(List<Integer> numbers, int n){
-        this.numbers = numbers;
-        this.n = n;
+    public NrArray( int n, int ... numbers){
+       if(numbers.length != n){
+           throw new IllegalArgumentException("The number of elements does not match n");}
+        else{
+            this.numbers = new ArrayList<Integer>();
+            for (int number : numbers){
+               this.numbers.add(number);
+               this.n = n;}
+       }
     }
     public int maxNumber(){
         if(numbers.isEmpty()){
