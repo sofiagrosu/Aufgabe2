@@ -19,7 +19,13 @@ public class NrArray {
         }
         return max;
     }
-
+   private int totalSum(){
+       int totalSum = 0;
+       for(int number : numbers){
+           totalSum += number;
+       }
+       return totalSum;
+   }
     public int minNumber(){
         if(numbers.isEmpty()){
             return 0;
@@ -37,16 +43,15 @@ public class NrArray {
         if(numbers.size() < n){
             return 0;
         }
-        int totalSum = 0;
-        for(int number : numbers){
-            totalSum += number;
-        }
+       int Sum = totalSum();
         int min = minNumber();
-        return totalSum - min;
+        return Sum - min;
     }
     public int minSum(){
         if(numbers.size() <n )
             return 0;
-        int totalSum = 0;
+        int Sum = totalSum();
+        int max = maxNumber();
+        return Sum - max;
     }
 }
